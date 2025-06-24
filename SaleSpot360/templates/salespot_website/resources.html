@@ -1,0 +1,176 @@
+    {% extends "salespot_website/Base_page.html" %}
+    {% load static %}
+
+    {% block content %}
+
+        {% block extra_css %}
+            <style>
+                .feature_box_content { padding: 5px 10px; border-radius: 10px; }
+                .feature_box_content:hover { 
+                    /* background-color: #c77070; */
+                    color: #fff !important;
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    transition: all 0.3s ease;
+                }
+            </style>
+        {% endblock %}
+
+        <!-- Best Pricing Start -->
+        <section class="best-pricing best-pricing2 pricing-padding2">
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="section-tittle text-center">
+                            <h2>Loading....</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Best Pricing End -->
+
+        <!-- Pricing Card Start -->
+        {% comment %} <div class="pricing-card-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-card text-center mb-30">
+                            <div class="card-top">
+                                <span>2 Years</span>
+                                <h4>$05 <span>/ month</span></h4>
+                            </div>
+                            <div class="card-bottom">
+                                <ul>
+                                    <li>Increase traffic 50%</li>
+                                    <li>E-mail support</li>
+                                    <li>10 Free Optimization</li>
+                                    <li>24/7  support</li>
+                                </ul>
+                                <a href="services.html" class="btn card-btn1">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-card  text-center mb-30">
+                            <div class="card-top">
+                                <span>2 Years</span>
+                                <h4>$05 <span>/ month</span></h4>
+                            </div>
+                            <div class="card-bottom">
+                                <ul>
+                                    <li>Increase traffic 50%</li>
+                                    <li>E-mail support</li>
+                                    <li>10 Free Optimization</li>
+                                    <li>24/7  support</li>
+                                </ul>
+                                <a href="#" class="btn card-btn1">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-card text-center mb-30">
+                            <div class="card-top">
+                                <span>2 Years</span>
+                                <h4>$05 <span>/ month</span></h4>
+                            </div>
+                            <div class="card-bottom">
+                                <ul>
+                                    <li>Increase traffic 50%</li>
+                                    <li>E-mail support</li>
+                                    <li>10 Free Optimization</li>
+                                    <li>24/7  support</li>
+                                </ul>
+                                <a href="#" class="btn card-btn1">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+        <!-- Pricing Card End -->
+
+    {% endblock %}
+
+    {% block scripts %}
+   
+	<!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'salespot_website/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+		
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static 'salespot_website/assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static 'salespot_website/assets/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'salespot_website/assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/slick.min.js' %}"></script>
+        
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'salespot_website/assets/js/wow.min.js' %}"></script>
+		<script src="{% static 'salespot_website/assets/js/animated.headline.js' %}"></script>
+		
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="{% static 'salespot_website/assets/js/jquery.scrollUp.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'salespot_website/assets/js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.magnific-popup.js' %}"></script>
+
+        <!-- contact js -->
+        <script src="{% static 'salespot_website/assets/js/contact.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.form.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/mail-script.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="{% static 'salespot_website/assets/js/plugins.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/main.js' %}"></script>
+
+        <!-- Optional auto-hide after delay -->
+        <script>
+            window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+            }, 2000); // Hide after 3 seconds
+            });
+        </script>
+
+        <script>
+            document.getElementById("loginLink").addEventListener("click", function () {
+                const loginUrl = `${window.location.protocol}//${window.location.host}/admin/login/?next=/admin/`;
+                window.open(loginUrl, "_blank");
+            });
+        </script>
+
+        <!-- New Loading animation Script -->
+        <script>
+            setTimeout(() => {
+                const logo1 = document.getElementById('logo1');
+                const logo2 = document.getElementById('logo2');
+
+                // Position to center and trigger spin
+                logo1.style.left = 'calc(50% - min(40vw, 200px) / 2)';
+                logo1.style.opacity = '1';
+                logo2.style.right = 'calc(50% - min(40vw, 200px) / 2)';
+                logo2.style.opacity = '1';
+
+                logo1.style.animation = 'spinYForward 1.2s ease-in-out forwards';
+                logo2.style.animation = 'spinYBackward 1.2s ease-in-out forwards';
+
+                // Fade out after spin
+                setTimeout(() => {
+                const loader = document.getElementById('loader');
+                loader.style.transition = 'opacity 0.6s ease';
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 600);
+                }, 1200);
+            }, 1300);
+        </script>
+        
+    {% endblock %}

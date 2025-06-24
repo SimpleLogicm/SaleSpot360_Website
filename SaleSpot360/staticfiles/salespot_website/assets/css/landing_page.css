@@ -1,0 +1,484 @@
+.bold{font-weight: bold;}
+
+/* Loader Overlay Start */
+    .loader-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(17, 17, 17, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        /* opacity: 0.5; */
+    }
+
+    .loader-wrapper {
+        position: relative;
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo {
+        width: 100%;
+        display: block;
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .m-light {
+        fill: none;
+        stroke: white;
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 30 170;
+        stroke-dashoffset: 0;
+        animation: moveLight 1s linear infinite;
+        filter: drop-shadow(0 0 4px #f00) drop-shadow(0 0 12px #ff6600);
+    }
+
+    @keyframes moveLight {
+        0% {
+        stroke-dashoffset: 0;
+        }
+        100% {
+        stroke-dashoffset: -200;
+        }
+    }
+/* Loader Overlay End */
+
+
+/*  */
+
+.nav_lp_button {
+    background: #D32F2F;
+    padding: 20px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #D32F2F;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_lp_button:hover {
+    background: #ffffff;
+    border: 1px solid #D32F2F;
+    color: #D32F2F !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.radius-btn {
+    padding: 30px 43px;
+    border-radius: 30px
+}
+
+/*  */
+
+
+/*  */
+.landing_div { margin-top: 5%; }
+.grey_bg { background: rgb(233, 233, 233); }
+.color_red {color: #D32F2F;}
+
+/*  */
+
+/* Lets Connect BOX Start */
+
+.lets_connect_box { border: 1px solid #ffffff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); background: #fff; 
+    /* position: fixed;
+    top: 10%;
+    right: 5%;
+    width: 50%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 999; */
+}
+/* .underline_highlight { display: inline-block; 
+    text-align: center;
+    border-bottom: 2px solid #D32F2F;
+    padding-bottom: 2px; 
+    color: #D32F2F;
+} */
+
+.underline_highlight {
+    position: relative;
+    display: inline-block;
+    color: #222222;
+    font-weight: bold;
+    padding-bottom: 8px; /* space for underline */
+  }
+  
+  .underline_highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%; /* 100% is the text width; 200% doubles it */
+    height: 2px;
+    background-color: #D32F2F;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* .users_button {
+    padding: 5px 10px;
+    background-color: #ffffff;
+    border: 1px solid rgb(201, 201, 201);
+    color: #222222;
+    border-radius: 20px;
+    margin-right: 2rem;
+} */
+
+.active-users-button {
+  background-color: #D32F2F;
+  border: 1px solid #D32F2F;
+  color: #ffffff;
+}
+
+.refresh-captcha {
+  background: none;
+  border: none;
+  color: #28a745;
+  font-size: 1.2rem;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* .users_button:active {
+    padding: 5px 10px;
+    background-color: #D32F2F;
+    border: 1px solid #D32F2F;
+    color: #ffffff;
+    border-radius: 20px;
+    margin-right: 2rem;
+} */
+
+.form-select .current {
+    margin: 0 !important;
+    font-weight: 300;
+}
+
+.form-select {
+    /* --bs-form-select-bg-img: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e); */
+    --bs-form-select-bg-img: none;
+    display: block;
+    width: 100%;
+    padding: .375rem .25rem .375rem .75rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Lets Connect BOX END */
+
+/* /################################### OUR FEATURES#################################################  / */
+
+
+  .feature_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .feature_item {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    display: flex;
+  }
+
+@media (min-width: 992px) {
+  .feature_item {
+    width: 33.3333%;
+    border-bottom: 1px solid #ccc; /* Add bottom border to all */
+  }
+  /* Remove right border on last item in each row (3rd, 6th, 9th...) */
+  .feature_item:nth-child(3n) {
+    border-right: none;
+  }
+  /* Remove bottom border on last row items (4th, 5th, 6th) */
+  .feature_item:nth-child(n+4) {
+    border-bottom: none;
+  }
+  /* Remove the border-bottom from the container row itself */
+  .feature_row {
+    border-bottom: none;
+  }
+}
+
+
+  /* Medium screens: 2 columns */
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    .feature_item {
+      width: 50%;
+    }
+    /* Remove right border on every 2nd item (end of row) */
+    .feature_item:nth-child(2n) {
+      border-right: none;
+    }
+    /* Add bottom border after every 2nd item */
+    .feature_item:nth-child(2n) {
+      border-bottom: 1px solid #ccc;
+    }
+    /* Remove bottom border on last two items */
+    .feature_item:nth-child(n+5) {
+      border-bottom: none;
+    }
+  }
+
+  /* Small screens: 1 column */
+  @media (max-width: 575.98px) {
+    .feature_item {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #ccc;
+    }
+    /* Remove bottom border on last item */
+    .feature_item:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .feature_box {
+    width: 100%;
+  }
+
+  .feature_img_box {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .feature_content_box {
+    text-align: center;
+  }
+/* 
+/################################### OUR FEATURES#################################################3  / */
+
+/* -------------------------------------- */
+.industries_section_landing {padding: 50px 0;}
+.industries_section_landing .header h1 { color: #D32F2F; font-weight: bold; margin-bottom: 50px; }
+#industries_image { display: flex; justify-content: center; align-items: center; }
+#industries_image img { max-width: 90%; }
+
+.accordian_content { display: flex; flex-direction: column; }
+.accordian_content .industry_header { background: white; padding: 20px; border: 1px solid rgb(199, 199, 199); border-radius: 15px; margin-bottom: 20px; box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05); }
+/* ----------------------------------- */
+
+/* Contact Us Section Start */
+
+.contact_us_box { 
+  background: #000;
+  padding: 40px;
+}
+
+.contact_us_box h1 { 
+  color: #fff;
+  font-weight: bold;
+}
+
+.contact_us_button {
+  background: #D32F2F;
+  padding: 30px 40px;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #D32F2F;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_us_button:hover {
+  background: #ffffff;
+  padding: 30px 40px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  color: #D32F2F !important;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact_button_inside { display: flex; justify-content: end; align-items: center; }
+.contact_button_inside a { width: fit-content; }
+
+@media only screen and (min-width: 450px) and (max-width: 750px) {
+  .contact_button_inside { display: flex; justify-content: center; align-items: center; }
+  .contact_button_inside a { width: fit-content; }
+}
+
+@media only screen and (max-width: 450px) {
+  .contact_button_content { text-align: center; }
+  .contact_button_inside { display: flex; justify-content: center; align-items: center; }
+  .contact_button_inside a { width: fit-content; }
+}
+  
+  /* Contact Us Section End */
+
+/* ###################################################################Why Prefer SalesPot - Start ##########################################################*/
+
+.prefer_sales_360_box {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  border-right: 2px solid #D32F2F;
+  border-bottom: 2px solid #D32F2F;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 3px 10px rgba(0,0,0,0.15);
+  height: 280px;
+}
+
+.prefer_sales_360_box .content_title {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #D32F2F;
+}
+
+.prefer_sales_360_box .content_data ul {
+  padding-left: 20px;
+}
+
+.prefer_sales_360_box .content_data ul li {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.prefer_sales_360_box .content_data ul li > i {
+  font-size: 8px;
+  color: #D32F2F;
+  margin-right: 8px;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 770px) {
+  .prefer_sales_360_box {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  border-right: 2px solid #D32F2F;
+  border-bottom: 2px solid #D32F2F;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 3px 10px rgba(0,0,0,0.15);
+  height: auto;
+}
+}
+
+@media only screen and (max-width: 450px) {
+  .prefer_sales_360_box {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  border-right: 2px solid #D32F2F;
+  border-bottom: 2px solid #D32F2F;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 3px 10px rgba(0,0,0,0.15);
+  height: auto;
+}
+}
+
+
+/* ############################################################Why Prefer SalesPot - End ###############################################################################*/
+
+footer { background: #000; color: white; font-family: Arial, sans-serif; padding: 40px 20px; }
+footer .row_one { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 30px 0; border-bottom: 1px solid #fff; }
+footer .row_one h1 { color: #fff; font-weight: bold; }
+footer .row_one h2 { color: #fff; font-weight: bold; }
+@media (max-width: 768px) {
+  footer .row_one {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .row_one > div:first-child {
+    order: 2; /* Move h1 down */
+  }
+
+  footer .row_one > div:last-child {
+    order: 1; /* Move image up */
+  }
+
+  footer .row_one > div {
+    margin-bottom: 20px;
+  }
+
+  footer .row_one img {
+    margin: 0 auto 10px;
+  }
+}
+
+
+footer .row_two { text-align: center; padding: 30px 0; border-bottom: 1px solid #fff; }
+
+footer .row_three { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 30px 0; }
+footer .row_three p { color: #fff; font-size: 20px; }
+footer .row_three .social_links img { height: 40px; padding: 0px 10px; }
+footer .row_three .copyright { color: #fff; font-size: 20px; }
+
+/* .footer-main .contact_data { text-align: center;} */
+
+/* User range buttons */
+.users_button {
+  background-color: #e9ecef;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  text-align: center;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.users_button:hover,
+.users_button.active {
+  background-color: #D32F2F;
+  color: #fff;
+  border-color: #D32F2F;
+}

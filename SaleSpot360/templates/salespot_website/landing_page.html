@@ -1,0 +1,905 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaleSpot360 Landing Page.</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.0.1/css/intlTelInput.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"/>
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/landing_page.css' %}">
+
+</head>
+<body>
+
+    <!-- Loader Overlay -->
+    <!-- <div class="loader-overlay" id="loader">
+        <div class="loader-wrapper">
+            <img class="logo" src="https://i.postimg.cc/zDx6BFM2/METAL-LOGO-2x.png.png" alt="M Logo" />
+            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                <path class="m-light" d="M 10 80 L 10 20 L 50 60 L 90 20 L 90 80" />
+            </svg>
+        </div>
+    </div> -->
+    <!-- Preloader Start -->
+
+    <header>
+        <!-- Header Start -->
+       <div class="header-area header-transparrent ">
+            <div class="main-header header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-2">
+                            <div class="logo">
+                                {% comment %} <a href="{% url 'landing_page' %}"><img style="height: 75px;" src="{% static 'salespot_website/assets/img/logo/Salespot-Logo_Full_BG.png' %}" alt=""></a> {% endcomment %}
+                                <a href="{% url 'landing_page' %}"><img style="height: 75px;" src="{% static 'salespot_website/assets/img/logo/Salespot_Logo_png.png' %}" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <!-- Main-menu -->
+                            <!-- <div class="main-menu f-right d-none d-lg-block">
+                                <button style="height: 20px;" class="nav_lp_button" target="_blank" href="#" >Visit Website</button>
+                                <nav class="d-flex align-items-center">
+                                    <button style="height: 20px;" class="nav_lp_button" target="_blank" href="#" >Visit Website</button>
+                                </nav>
+                            </div> -->
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+        <!-- Header End -->
+    </header>
+
+    <main>
+
+        <!-- landing div - Start -->
+        <div class="landing_div grey_bg">
+            <div class="container ">
+
+                <div class="row">
+    
+                    <div class="col-md-5 col-sm-12 mt-5">
+
+                        <div class="mt-3 mb-3" >
+                            <span class="color_red" >Let's <span class="bold">Begin</span></span>
+
+                            <h2 class="mt-3 bold">Choose SaleSpot -<br>
+                                the <span class="color_red" >smarter</span> way to manage your sales.
+                            </h2>
+
+                            <p class="mt-3">SaleSpot is a smart and simple field sales app built for industries like FMCG, Retail, 
+                                and Distribution. It helps your team stay organised, take orders,
+                                plan visits, and collect feedback - all in one easy-to-use app .Within offline access, 
+                                real-time updates, and multiple language support, your team can work smoothly.
+                            </p>
+                        </div>
+    
+                    </div>
+    
+                    <div class="col-md-7 col-sm-12">
+
+                        <div class="lets_connect_box mt-5 mb-3" >
+
+                            <div class="col-12 d-flex justify-content-center align-items-center mt-3 mb-3">
+                                <h2 class="text-center underline_highlight" >Let's Connect</h2>
+                            </div>
+
+                            <div class="col-md-12 p-4">
+                                <form id="UserResponse_Form">
+                                {% csrf_token %} <!-- CSRF Token -->
+                                    <div class="row">
+                                        
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="mb-3">
+                                                <label for="full_name" class="form-label">Full Name</label>
+                                                <input type="text" class="form-control" id="full_name" aria-describedby="full_name" placeholder="Enter">
+                                                <span id="full_name_error"></span>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="mb-3">
+                                                <label for="contact_number" class="form-label">Contact Number</label>
+                                                <input type="text" class="form-control" id="contact_number" aria-describedby="contact_number" placeholder="Enter Contact Number">
+                                                <span id="contact_number_error" class="text-danger"></span>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter">
+                                                <span id="email_error"></span>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="mb-3">
+                                                <label for="company_name" class="form-label">Company Name</label>
+                                                <input type="text" class="form-control" id="company_name" placeholder="Enter">
+                                                <span id="company_name_error"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12 mt-3 mb-3">
+                                            <div class="mb-3">
+                                                <label for="no_of_users" class="form-label">No of Users</label>
+                                                <div>
+                                                    <span class="users_button" data-value="1-20" >1 - 20</span>
+                                                    <span class="users_button" data-value="21-40" >21 - 40</span>
+                                                    <span class="users_button" data-value="41-70" >41 - 70</span>
+                                                    <span class="users_button" data-value="71-100" >71 - 100</span>
+                                                    <span class="users_button" data-value="100+" >100+</span>
+                                                </div>
+                                                <span id="no_of_users_error" class="mt-2"></span>
+                                            </div>
+                                            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12 mt-3 mb-3">
+                                            <div class="mb-3">
+                                                <label for="message" class="form-label">Message</label>
+                                                <input type="text" class="form-control" id="message" placeholder="Enter">
+                                                <span id="message_error"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="mb-3">
+                                                <label for="captcha" class="form-label">Captcha</label>
+                                                <input type="text" class="form-control" id="captcha" aria-describedby="captcha" placeholder="Enter">
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-6 col-sm-6">
+                                            <div style="background-color: rgb(175, 175, 175); height: 80%; width: 100%;" class="mb-3 d-flex justify-content-center align-items-center">
+                                                {% comment %} <span id="load_captcha">AxJKl50</span>
+                                                <button type="button" class="refresh-captcha fs-3">↻</button> {% endcomment %}
+                                                <span class="captcha-image ms-4 fs-4" id="captcha-text"></span>
+                                                <button type="button" class="refresh-captcha fs-3">↻</button>
+                                            </div>
+                                        </div>
+                                        <span id="captcha_error"></span>
+
+                                        <div class="col-md-12 col-sm-12 text-center mt-3 mb-3">
+                                            <button type="submit" onclick="submit_user_details_data(event)" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+    
+                </div>         
+                
+            </div>
+        </div>
+        <!-- landing div - End -->
+
+        <!-- Our Features Start -->
+
+        <div class="best_features_landing">
+            <div class="container mt-5 mb-5">
+                <div class="text-center mb-5">
+                <h1><b>Our Features</b></h1>
+                </div>
+
+                <div class="feature_row">
+                <!-- Feature 1 -->
+                <div class="feature_item">
+                    <div class="feature_box">
+                    <div class="feature_img_box">
+                        <img src="{% static 'salespot_website/assets/img/feature_images/location_tracking.svg' %}" alt="Location Tracking" class="img-fluid">
+                    </div>
+                    <div class="feature_content_box">
+                        <h3>Location Tracking</h3>
+                        <p>Keep track of your team with real-time GPS. Logs every movement, confirms store visits, and suggests smarter routes.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature_item">
+                    <div class="feature_box">
+                    <div class="feature_img_box">
+                        <img src="{% static 'salespot_website/assets/img/feature_images/attendance.svg' %}" alt="Attendance" class="img-fluid">
+                    </div>
+                    <div class="feature_content_box">
+                        <h3>Attendance</h3>
+                        <p>Staff check-in with GPS and biometrics. Prevents proxy, tracks shifts, ensures compliance and accurate timekeeping.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature_item">
+                    <div class="feature_box">
+                    <div class="feature_img_box">
+                        <img src="{% static 'salespot_website/assets/img/feature_images/time_management.svg' %}" alt="Task Management" class="img-fluid">
+                    </div>
+                    <div class="feature_content_box">
+                        <h3>Task Management</h3>
+                        <p>Assign tasks, track progress live, and connect seamlessly with CRM. Stay on top of deadlines and improve sales flow.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature_item">
+                    <div class="feature_box">
+                    <div class="feature_img_box">
+                        <img src="{% static 'salespot_website/assets/img/feature_images/beat_plan.svg' %}" alt="BEAT Plan" class="img-fluid">
+                    </div>
+                    <div class="feature_content_box">
+                        <h3>BEAT Plan</h3>
+                        <p>AI-powered route planning with auto-scheduling, real-time adjustments, and customer visit insights.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature_item">
+                    <div class="feature_box">
+                    <div class="feature_img_box">
+                        <img src="{% static 'salespot_website/assets/img/feature_images/expenses.svg' %}" alt="Expenses" class="img-fluid">
+                    </div>
+                    <div class="feature_content_box">
+                        <h3>Expenses</h3>
+                        <p>Log expenses instantly via receipt scan. Auto-categorizes spends, enforces policy, and speeds up approvals.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature_item">
+                    <div class="feature_box">
+                    <div class="feature_img_box">
+                        <img src="{% static 'salespot_website/assets/img/feature_images/target.svg' %}" alt="Orders & Targets" class="img-fluid">
+                    </div>
+                    <div class="feature_content_box">
+                        <h3>Orders & Targets</h3>
+                        <p>Convert quotes offline, track sales targets, auto-calculate commissions, and prevent overselling.</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Features End -->
+
+        <!-- Industries - Start -->
+        <div class="industries_section_landing sky-blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="header text-center">
+                            <h1>Industries</h1>
+                        </div>
+
+                        <div class="accordian_content">
+
+                            <div class="industry_header" >
+                                <h3> <b>FMCG</b> <br> (Fast-Moving Consumer Goods) </h3>
+                            </div>
+
+                            <div class="industry_header" >
+                                <h3> <b>Manufacturing</b> </h3>
+                            </div>
+
+                            <div class="industry_header" >
+                                <h3> <b>Consumer Electronics & Appliances</b> </h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div id="industries_image">
+                            <img src="{% static 'salespot_website/assets/img/shape/Metal-phone-image.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Industries - End -->
+
+        <!-- Contact Us Banner Start -->
+        <div class="contact_us_box mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 contact_button_content">
+                        <h1>Set up a time to explore our platform.</h1>
+                    </div>
+                    <div class="col-md-6 col-sm-12 contact_button_inside">
+                        <a style="height: 20px;" class="contact_us_button" target="_blank" href="{% url 'contactus' %}" >Contact US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Us Banner End -->
+
+        <!-- Why Prefer SalesPot360 - Start -->
+        <div class="container mt-5 mb-5 why_prefer_salespot">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="header_text text-center">
+                        <h1>Why prefer SalesPot360</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Works Without Internet -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="prefer_sales_360_box border_right_bottom_maroon">
+                        <div class="content_title">
+                            <h5>Works Even Without Internet</h5>
+                        </div>
+                        <div class="content_data">
+                            <ul>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Keeps your team working, even in low-network areas.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Saves data locally and syncs it once back online.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Perfect for remote locations and on-the-go sales team.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Easy to Use in Multiple Languages -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="prefer_sales_360_box border_right_bottom_maroon">
+                        <div class="content_title">
+                            <h5>Easy to Use in Multiple Languages</h5>
+                        </div>
+                        <div class="content_data">
+                            <ul>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Supports English, Hindi, Gujarati and more.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Makes it simple for users from different regions to adapt.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Helps include a wider workforce with local language options.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All Your Data in One Place -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="prefer_sales_360_box border_right_bottom_maroon">
+                        <div class="content_title">
+                            <h5>All Your Data in One Place</h5>
+                        </div>
+                        <div class="content_data">
+                            <ul>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Syncs information in real-time across mobile, web and admin dashboards.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Removes data silos and gives one clear version of the truth.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Keeps your entire team aligned, wherever they are.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strong, Multi-Layer Security -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="prefer_sales_360_box border_right_bottom_maroon">
+                        <div class="content_title">
+                            <h5>Strong, Multi-Layer Security</h5>
+                        </div>
+                        <div class="content_data">
+                            <ul>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Use fingerprint, face recognition, and passwords.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Protects access from unauthorized users.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Encrypts every interaction for complete peace of mind.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real-Time Team Visibility -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="prefer_sales_360_box border_right_bottom_maroon">
+                        <div class="content_title">
+                            <h5>Real-Time Team Visibility</h5>
+                        </div>
+                        <div class="content_data">
+                            <ul>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Track field agents with location-based updates.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> See visit statuses, movement patterns and task progress.</li>
+                                <li><i class="fa-solid fa-circle mr-2"></i> Gives managers the real-time data they need to drive results.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Why Prefer SalesPot360 - End -->
+
+        <hr>
+        
+        <!-- Available App  Start-->
+        <div class="available-app-area">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="app-caption">
+                            <div class="section-tittle section-tittle3">
+                                <h2>Our app is available on all devices. Download now!</h2>
+                                {% comment %} <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fug.</p> {% endcomment %}
+                                <div class="app-btn">
+                                    <a href="#" target="_blank" class="app-btn1"><img src="{% static 'salespot_website/assets/img/shape/app_btn1.png' %}" alt=""></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.sl.salespot360&hl=en_US" target="_blank" class="app-btn2"><img src="{% static 'salespot_website/assets/img/shape/app_btn2.png' %}" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-flex justify-content-center aligh-items-center">
+                        <div class="app-img">
+                            <img src="{% static 'salespot_website/assets/img/shape/app_download_section.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Shape -->
+            <div class="app-shape">
+                <img src="{% static 'salespot_website/assets/img/shape/app-shape-top.png' %}" alt="" class="app-shape-top heartbeat d-none d-lg-block">
+                <img src="{% static 'salespot_website/assets/img/shape/app-shape-left.png' %}" alt="" class="app-shape-left d-none d-xl-block">
+                <!-- <img src="assets/img/shape/app-shape-right.png" alt="" class="app-shape-right bounce-animate "> -->
+            </div>
+        </div>
+        <!-- Available App End-->
+        
+    </main>
+
+    <!-- Footer Start-->
+    <footer>
+        <div class="container-fluid">
+          <div class="row_one">
+            <div>
+              <h1>
+                Let’s build something<br>great, Side by side
+              </h1>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <img src="{% static 'salespot_website/assets/img/logo/Salespot_Logo_png_white.png' %}" alt="logo" style="height: 100px; margin-right: 10px;">
+              {% comment %} <h2>Salespot</h2> {% endcomment %}
+            </div>
+          </div>
+      
+          <div class="row_two">
+            <h3 style="margin-bottom: 20px; color: white;">Contact Us</h3>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+              
+              <!-- Phone -->
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="background: white; border-radius: 50%; padding: 10px; display: flex; align-items: center; justify-content: center;">
+                  <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="phone" style="width: 20px; height: 20px;">
+                </div>
+                <span style="color: white;">09876543210</span>
+              </div>
+          
+              <!-- Email -->
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="background: white; border-radius: 50%; padding: 10px; display: flex; align-items: center; justify-content: center;">
+                  <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="email" style="width: 20px; height: 20px;">
+                </div>
+                <span style="color: white;">marketing@simplelogic-it.com</span>
+              </div>
+          
+            </div>
+          </div>
+      
+          <div class="row_three">
+            <div>
+              <p>Follow Us On</p>
+              <div class="social_links">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+              </div>
+            </div>
+            <div>
+              <p class="copyright">Copyright©2025 All right reserved</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+    <!-- Footer End-->
+
+
+
+    <!-- JS here -->
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'salespot_website/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+		
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static 'salespot_website/assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static 'salespot_website/assets/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'salespot_website/assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/slick.min.js' %}"></script>
+        
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'salespot_website/assets/js/wow.min.js' %}"></script>
+		<script src="{% static 'salespot_website/assets/js/animated.headline.js' %}"></script>
+		
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="{% static 'salespot_website/assets/js/jquery.scrollUp.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'salespot_website/assets/js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.magnific-popup.js' %}"></script>
+
+        <!-- contact js -->
+        <script src="{% static 'salespot_website/assets/js/contact.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.form.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/mail-script.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="{% static 'salespot_website/assets/js/plugins.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/main.js' %}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.0.1/js/intlTelInput.min.js"></script>
+
+    <!-- Sweet Alert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            const contact_numberInput = document.querySelector("#contact_number");
+            const iti = window.intlTelInput(contact_numberInput, {
+                initialCountry: "in",
+                separateDialCode: true,
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+            });
+        </script>
+
+    <!-- Get Country code data -->
+    {% comment %} <script>
+        $(document).ready(function() {
+      
+          // Use static method to get country data
+          const countryData = window.intlTelInputGlobals.getCountryData();
+      
+          if (Array.isArray(countryData) && countryData.length > 0) {
+            const $countryCodeSelect = $("#countryCode");
+            countryData.forEach(country => {
+              const option = `<option value="+${country.dialCode}">${country.name} (${country.iso2.toUpperCase()}) +${country.dialCode}</option>`;
+              $countryCodeSelect.append(option);
+            });
+      
+            // Set default country by geoIP
+            $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+              const countryCode = (resp && resp.country) ? resp.country.toLowerCase() : "us";
+              const defaultCountry = countryData.find(c => c.iso2 === countryCode);
+              if (defaultCountry) {
+                $countryCodeSelect.val("+" + defaultCountry.dialCode);
+              }
+            });
+          } else {
+            console.log("No country data loaded.");
+          }
+        });
+    </script> {% endcomment %}
+
+    <!-- Get Country code data -->
+        <script>
+            $(document).ready(function () {
+
+                $("#countryCodeIndex").hide();
+                const $countryCodeSelect = $("#countryCodeIndex");
+
+                if ($countryCodeSelect.length === 0) {
+                    console.error("Select element with ID 'countryCodeIndex' not found in DOM.");
+                    return;
+                }
+
+                // Clear any existing options (optional)
+                $countryCodeSelect.empty();
+
+                // Check if intlTelInputGlobals is available
+                if (window.intlTelInputGlobals && typeof window.intlTelInputGlobals.getCountryData === 'function') {
+                    const countryData = window.intlTelInputGlobals.getCountryData();
+
+                    if (Array.isArray(countryData) && countryData.length > 0) {
+                        // Add default placeholder option
+                        $countryCodeSelect.append(`<option value="">-- Select Country Code --</option>`);
+
+                        // Append each country option
+                        countryData.forEach(country => {
+                            const name = country.name || "Unknown";
+                            const dialCode = country.dialCode || "";
+                            const iso2 = country.iso2 ? country.iso2.toUpperCase() : "";
+
+                            const option = `<option value="+${dialCode}">${name} (${iso2}) +${dialCode}</option>`;
+                            $countryCodeSelect.append(option);
+                            // console.log('Country option : ', option);
+                        });
+
+                        // Ensure the select is visible
+                        $countryCodeSelect.show();
+
+                        // Set default country code by IP location
+                        $.get("https://ipinfo.io", function () {}, "jsonp").always(function (resp) {
+                            const countryCode = (resp && resp.country) ? resp.country.toLowerCase() : "us";
+                            const defaultCountry = countryData.find(c => c.iso2 === countryCode);
+
+                            if (defaultCountry) {
+                                $countryCodeSelect.val("+" + defaultCountry.dialCode);
+                            }
+                        });
+
+                    } else {
+                        console.error("No country data loaded.");
+                    }
+                } else {
+                    console.error("intlTelInputGlobals is not available.");
+                }
+            });
+        </script>
+
+    <!-- Optional auto-hide after delay -->
+    <script>
+        window.addEventListener("load", () => {
+        setTimeout(() => {
+            document.getElementById("loader").style.display = "none";
+        }, 2000); // Hide after 3 seconds
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+          $(".users_button").click(function() {
+            $(".users_button").removeClass("active-users-button");
+            $(this).addClass("active-users-button");
+          });
+        });
+    </script>
+
+    <script>
+
+            const clearErrors = () => {
+                setTimeout(() => {
+                    $("#full_name_error, #contact_number_error, #email_error, #company_name_error, #no_of_users_error, #mobile_error, #message_error, #captcha_error").fadeOut();
+                }, 3000);
+            };
+
+            function submit_user_details_data(event) {  
+                event.preventDefault(); // Prevent default form submission
+
+                // Clear previous error messages
+                $("#full_name_error, #contact_number_error, #email_error, #company_name_error, #no_of_users_error, #mobile_error, #message_error, #captcha_error").text("").show();
+        
+                // Validate Name
+                let full_name = $('#full_name').val();
+                if (!full_name) {
+                    $("#full_name_error").text("Name is required.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                } else if (!/^[A-Za-z]+$/.test(full_name)) {
+                    $("#full_name_error").text("Name must contain only alphabets.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                // Validate Mobile
+                // let countryCode = $('#countryCodeIndex').val();
+                let countryCode = "+" + iti.getSelectedCountryData().dialCode;
+                let contact_number = $('#contact_number').val();
+                let mobilePattern = /^[0-9]+$/;
+
+                if (!contact_number) {
+                    $("#contact_number_error").text("Mobile number is required.").css("color", "red").show();
+                    clearErrors();
+                    return;
+                } else if (!mobilePattern.test(contact_number)) {
+                    $("#contact_number_error").text("Mobile number must contain only numerical digits.").css("color", "red").show();
+                    clearErrors();
+                    return;
+                } else if (contact_number.length < 10) {
+                    $("#contact_number_error").text("Mobile number should be at least 10 digits.").css("color", "red").show();
+                    clearErrors();
+                    return;
+                } else if (contact_number.length > 10) {
+                    $("#contact_number_error").text("Mobile number should only be a maximum of 10 digits.").css("color", "red").show();
+                    clearErrors();
+                    return;
+                }
+
+                // Validate Email
+                let email = $('#email').val();
+                if (!email) {
+                    $("#email_error").text("Email Id is required.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email)) {
+                    $("#email_error").text("Invalid email id format.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                // Validate Name
+                let company_name = $('#company_name').val();
+                if (!company_name) {
+                    $("#company_name_error").text("Name is required.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                } else if (!/^[A-Za-z]+$/.test(company_name)) {
+                    $("#company_name_error").text("Name must contain only alphabets.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                // Validate Message
+                let no_of_users = $('.users_button.active-users-button').data('value');
+                if (!no_of_users) {
+                    $("#no_of_users_error").text("Please select number of users.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                // Validate Message
+                let message = $('#message').val();
+                if (!message) {
+                    $("#message_error").text("Message is required.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                //const selectedUser = $('#select_user').val();
+                const csrfToken = $('[name=csrfmiddlewaretoken]').val();  // Fetch CSRF token
+                
+                // Validate Captcha
+                const enteredCaptcha = $("#captcha").val();
+                const actualCaptcha = $("#captcha-text").text();
+
+                if (!enteredCaptcha) {
+                    $("#captcha_error").text("Captcha is required. Please enter the captcha.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                if (enteredCaptcha !== actualCaptcha) {
+                    $("#captcha_error").text("Captcha did not match. Please try again.").css("color", "red").show();
+                    clearErrors();
+                    refreshCaptcha(); // Refresh captcha after a failed attempt
+                    return; // Stop further validation
+                }
+
+                console.log('full_name : ', full_name)
+                console.log('countryCode : ', countryCode)
+                console.log('contact_number : ', contact_number)
+                console.log('email : ', email)
+                console.log('company_name : ', company_name)
+                console.log('no_of_users : ', no_of_users)
+                console.log('message : ', message)
+
+                $.ajax({
+                    url: `${window.location.protocol}//${window.location.host}/api/website/save_user_response/`,
+                    type: 'POST',
+                    data: {
+                        full_name: full_name,
+                        country_code: countryCode,
+                        contact_number: contact_number,
+                        email_id: email,
+                        company_name: company_name,
+                        no_of_users: no_of_users,
+                        message: message,
+                        csrfmiddlewaretoken: csrfToken
+                    },
+                    success: function (response) {
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Data submitted successfully!',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false,
+                        });
+
+                        // Optionally clear the form and refresh the captcha
+                        $('#UserResponse_Form')[0].reset();
+                        $(".users_button").removeClass("active-users-button");
+                        refreshCaptcha();
+                    },
+                    error: function (error) {
+                        alert('An error occurred while submitting feedback.');
+                        console.error('Error:', error);
+                    }
+                });
+                
+            }
+        
+            // Function to generate random captcha
+            function generateCaptcha() {
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                let captcha = '';
+                for (let i = 0; i < 7; i++) {
+                    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                return captcha;
+            }
+
+            // Function to refresh captcha
+            function refreshCaptcha() {
+                const newCaptcha = generateCaptcha();
+                $('#captcha-text').text(newCaptcha);
+                $('#captcha').val('');
+                $('#captcha-result').text('');
+            }
+
+            $(document).ready(function () {
+                // Initialize captcha on page load
+                refreshCaptcha();
+
+                // Refresh captcha on button click
+                $('.refresh-captcha').click(function () {
+                    refreshCaptcha();
+                });
+
+                // Submit feedback function with captcha check
+                
+            });
+        </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".users_button");
+
+            buttons.forEach(button => {
+            button.addEventListener("click", function () {
+                buttons.forEach(btn => btn.classList.remove("active")); // Remove active from all
+                this.classList.add("active"); // Add to clicked
+            });
+            });
+        });
+    </script>
+    
+</body>
+</html>

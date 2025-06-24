@@ -1,0 +1,911 @@
+    {% extends "salespot_website/Base_page.html" %}
+    {% load static %}
+
+    {% block content %}
+
+        {% block extra_css %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"/>
+        <style></style>
+        {% endblock %}
+
+        <!-- Slider Area Start-->
+        <div class="slider-area ">
+            <div class="slider-active">
+                <div class="single-slider slider-height slider-padding sky-blue d-flex align-items-center">
+                    <div class="container">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-6 col-md-12 ">
+                                <div class="hero__caption mt-5">
+                                    <!-- <span data-animation="fadeInUp" data-delay=".4s">App Landing Page</span> -->
+                                    <h1 data-animation="fadeInUp" data-delay=".6s">Choose SaleSpot-<br>the smarter way to manage your sales.</h1>
+                                    <!-- <p data-animation="fadeInUp" data-delay=".8s">Dorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusm tempor incididunt ulabore et dolore magna aliqua.</p> -->
+                                    <!-- Slider btn -->
+                                   <div class="slider-btns">
+                                        <!-- Hero-btn -->
+                                        {% comment %} <a data-animation="fadeInLeft" data-delay="1.0s" href="{% static '' %}industries.html" class="btn radius-btn">button</a> {% endcomment %}
+                                        {% comment %} <a data-animation="fadeInRight" data-delay="1.0s" href="{% static '' %}industries.html" class="btn radius-btn">button</a> {% endcomment %}
+                                        <!-- Video Btn -->
+                                        <!-- <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn ani-btn" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><i class="fas fa-play"></i></a> -->
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero__img  d-lg-block f-right" data-animation="fadeInRight" data-delay="1s">
+                                    <img src="{% static 'salespot_website/assets/img/hero_img/Website-image-01.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                
+            </div>
+        </div>
+        <!-- Slider Area End -->
+
+        <!-- CUSTOM - Best Features Start -->
+        <div class="container mt-5 mb-5">
+
+            <div class="container">
+                <div class="text-center mt-2 mb-4">
+                    <b><h1>Managing field sales shouldn’t slow you down – <br>
+                        SaleSpot keeps your team moving forward</h1></b>
+                    {% comment %} <b><h1>but it doesn't have to be.</h1></b> {% endcomment %}
+                </div>
+    
+                {% comment %} <div class="text-center mt-2 mb-4">
+                    <p>With features such as GPS employee tracking, sales tracking, location-based attendance, geo-verified client visits and initiative dashboards, 
+                        Unolo fully automates your workflow in just 10 minutes.</p>
+                    <!-- <h2>but it doesn't have to be.</h2> -->
+                </div> {% endcomment %}
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 col-sm-6 mb-5">
+                    <div class="feature_box">
+                        <div class="feature_img_box">
+                            <img src="{% static 'salespot_website/assets/img/feature_images/location_tracking.svg' %}" alt="icon">
+                        </div>
+                        <div class="feature_content_box">
+                            <h3>Location Tracking</h3>
+                            <p><b>"Keep track of your team with real-time GPS."</b><br>
+                                It logs every movement, confirms store visits with geotags, and suggests smarter travel routes. Even works when offline to keep your data safe and accurate.</p>
+                             <!-- <ul class="mb-3">
+                                <li>Shows where your sales team is in real-time.</li>
+                                <li>Helps you see if visits are happening as planned.</li>
+                                <li>Saves time by reducing unnecessary travel.</li>
+                             </ul> -->
+                            <a href="{% url 'location_tracking' %}"><p>Learn More <i class="fa-solid fa-arrow-right-long"></i><p></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-sm-6 mb-5">
+                    <div class="feature_box">
+                        <div class="feature_img_box">
+                            <img src="{% static 'salespot_website/assets/img/feature_images/attendance.svg' %}" alt="icon">
+                        </div>
+                        <div class="feature_content_box">
+                            <h3>Attendance</h3>
+                            <p><b>"Say goodbye to manual attendance."</b><br>
+                                Staff can check in and out using GPS and biometric verification. It prevents proxy punching, tracks shifts, and helps ensure accurate timekeeping and compliance.</p>
+                            <!-- <ul class="mb-3">
+                                <li>Team checks in and out using the app.</li>
+                                <li>Time and location are recorded automatically.</li>
+                                <li>No need for paper-based attendance.</li>
+                             </ul> -->
+                            <a href="{% url 'attendance' %}"><p>Learn More <i class="fa-solid fa-arrow-right-long"></i><p></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-sm-6 mb-5">
+                    <div class="feature_box">
+                        <div class="feature_img_box">
+                            <img src="{% static 'salespot_website/assets/img/feature_images/time_management.svg' %}" alt="icon">
+                        </div>
+                        <div class="feature_content_box">
+                            <h3>Task Management</h3>
+                            <p><b>"Stay in control of daily tasks."</b><br>
+                                Managers can assign sales tasks, check progress live, and get alerts for missed deadlines. Everything is connected with your CRM for smoother operations.</p>
+                            <!-- <ul class="mb-3">
+                                <li>Assign daily work to your sales team.</li>
+                                <li>Track if tasks are done or pending.</li>
+                                <li>Keeps everyone clear and focused.</li>
+                             </ul> -->
+                            <a href="{% url 'task_management' %}"><p>Learn More <i class="fa-solid fa-arrow-right-long"></i><p></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-sm-6 mb-5">
+                    <div class="feature_box">
+                        <div class="feature_img_box">
+                            <img src="{% static 'salespot_website/assets/img/feature_images/beat_plan.svg' %}" alt="icon">
+                        </div>
+                        <div class="feature_content_box">
+                            <h3>BEAT Plan</h3>
+                            <p><b>"Smarter sales routes, powered by AI."</b><br>
+                                Plan daily visits more efficiently with auto-scheduling, real-time adjustments, and insights into customer visits. Boost productivity by focusing on the right clients.</p>
+                            <!-- <ul class="mt-2 mb-3 text-left">
+                                <li>Plan daily routes for field visits.</li>
+                                <li>Link customers to each route.</li>
+                                <li>Helps in covering all areas on time.</li>
+                             </ul> -->
+                            <a href="{% url 'beat_plan' %}"><p>Learn More <i class="fa-solid fa-arrow-right-long"></i><p></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-sm-6 mb-5">
+                    <div class="feature_box">
+                        <div class="feature_img_box">
+                            <img src="{% static 'salespot_website/assets/img/feature_images/expenses.svg' %}" alt="icon">
+                        </div>
+                        <div class="feature_content_box">
+                            <h3>Expenses</h3>
+                            <p><b>"Simplify how field expenses are tracked."</b><br>
+                                Log expenses instantly using receipt scanning. The system auto-categorises spends, follows company policies, and ensures faster approvals and reimbursements.</p>
+                            <!-- <ul class="mt-2 mb-3 text-left">
+                                <li>Sales reps can upload travel and other expenses easily.</li>
+                                <li>Add photos of receipts with notes.</li>
+                                <li>Makes approval faster and records clearer.</li>
+                             </ul> -->
+                            <a href="{% url 'expenses' %}"><p>Learn More <i class="fa-solid fa-arrow-right-long"></i><p></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 col-sm-6 mb-5">
+                    <div class="feature_box">
+                        <div class="feature_img_box">
+                            <img src="{% static 'salespot_website/assets/img/feature_images/target.svg' %}" alt="icon">
+                        </div>
+                        <div class="feature_content_box">
+                            <h3>Orders & Targets</h3>
+                            <p><b>"Make Order Bookings Quick, and Accurate."</b><br>
+                                Convert quotes on the spot, even without internet. Track sales targets, calculate commissions, and connect with inventory to avoid overselling.
+                                </p>
+                            <!-- <ul class="mt-2 mb-3 text-left">
+                                <li>Take and manage orders anytime, even without internet.</li>
+                                <li>Set and track sales targets for each person.</li>
+                                <li>Helps the team stay motivated and close more deals.</li>
+                             </ul> -->
+                            <a href="{% url 'orders' %}"><p>Learn More <i class="fa-solid fa-arrow-right-long"></i><p></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- CUSTOM - Best Features End -->
+
+        <!-- AboutUs Area Start-->
+        <div class="Aboutus_area sky-blue mt-5">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <!-- <h1>About-US Image</h1> -->
+                        <div id="about_us_image">
+                            <img src="{% static 'salespot_website/assets/img/shape/Metal-phone-image.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h1><b>About SaleSpot</b></h1>
+                        <p><b>SaleSpot</b> is a smart and simple field sales app built for industries like FMCG, retail, and distribution. It helps your team stay organised, take orders, plan visits, and collect feedback – all in one easy-to-use app. With offline access, real-time updates, and multiple language support, your team can work smoothly, wherever they are.</p>
+                        <p>It makes everyday sales tasks quicker – from booking orders to tracking performance – while cutting down on paperwork. Whether you're just starting or growing fast, SaleSpot scales with your business to boost productivity, improve customer experience, and drive results.</p>
+                            
+                            </p>
+                        <!-- <a  href="#" class="btn radius-btn mt-2">Know more</a> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- AboutUs Area End -->
+
+        <!-- Functiona Area Start-->
+        <div class="functions_area mt-5">
+            <div class="container">
+              <div class="row mt-3">
+                <div class="col-12 mt-3 mb-3">
+                  <h1 class="text-center" style="color: black;">Sales Teams Are Switching to SaleSpot – Here’s Why</h1>
+                </div>
+                <div class="col-12">
+                  <div class="feature-grid">
+                    
+                    <!-- Box 1 -->
+                    <div class="function_content_box">
+                      <div class="features-icon">
+                        <img src="{% static 'salespot_website/assets/img/reason_images/Offline Functionality.svg' %}" alt="">
+                      </div>
+                      <div class="features-caption">
+                        <h3 style="color: black;">Works Even Without Internet</h3>
+                        <ul>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Keeps your team working, even in low-network areas.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Saves data locally and syncs it once back online.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Perfect for remote locations and on-the-go sales teams.</li>
+                        </ul>
+                      </div>
+                    </div>
+          
+                    <!-- Box 2 -->
+                    <div class="function_content_box">
+                      <div class="features-icon">
+                        <img src="{% static 'salespot_website/assets/img/reason_images/Multilingual Support.svg' %}" alt="">
+                      </div>
+                      <div class="features-caption">
+                        <h3 style="color: black;">Easy to Use in Multiple Languages</h3>
+                        <ul>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Supports English, Hindi, Gujarati, and more.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Makes it simple for users from different regions to adapt.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Helps include a wider workforce with local language options.</li>
+                        </ul>
+                      </div>
+                    </div>
+          
+                    <!-- Box 3 (centered row) -->
+                    <div class="function_content_box center-box">
+                      <div class="features-icon">
+                        <img src="{% static 'salespot_website/assets/img/reason_images/Centralised Data Management.svg' %}" alt="">
+                      </div>
+                      <div class="features-caption">
+                        <h3 style="color: black;">All Your Data in One Place</h3>
+                        <ul>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Syncs information in real-time across platforms.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Removes data silos and gives one clear version of the truth.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Keeps your entire team aligned.</li>
+                        </ul>
+                      </div>
+                    </div>
+          
+                    <!-- Box 4 -->
+                    <div class="function_content_box">
+                      <div class="features-icon">
+                        <img src="{% static 'salespot_website/assets/img/reason_images/Advanced Security Layers.svg' %}" alt="">
+                      </div>
+                      <div class="features-caption">
+                        <h3 style="color: black;">Strong, Multi-Layer Security</h3>
+                        <ul>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Fingerprint, face recognition, and passwords.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Blocks unauthorized access.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Encrypts every interaction.</li>
+                        </ul>
+                      </div>
+                    </div>
+          
+                    <!-- Box 5 -->
+                    <div class="function_content_box">
+                      <div class="features-icon">
+                        <img src="{% static 'salespot_website/assets/img/reason_images/Live Activity Monitoring.svg' %}" alt="">
+                      </div>
+                      <div class="features-caption">
+                        <h3 style="color: black;">Real-Time Team Visibility</h3>
+                        <ul>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Track agents with live location updates.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Monitor visit status and task progress.</li>
+                          <li><i class="fa-solid fa-check fs-3 mr-3"></i>Empowers managers with live insights.</li>
+                        </ul>
+                      </div>
+                    </div>
+          
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- Functions Area End -->
+
+        <!-- Applic App Start -->
+        <div class="applic-apps section-padding2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- slider Heading -->
+                    <div class="col-xl-4 col-lg-4 col-md-8">
+                        <div class="single-cases-info mb-30">
+                            <h3>A Closer Look at <br> SaleSpot 360 </h3>
+                            <p>The SaleSpot app offers a smooth and user-friendly experience for managing attendance, 
+                                placing orders, and tracking daily targets. With easy navigation and real-time updates, 
+                                it helps sales teams work faster and stay organised on the go. </p>
+                        </div>
+                    </div>
+                    <!-- OwL -->
+                    <div class="col-xl-8 col-lg-8 col-md-col-md-7">
+                        <div class="app-active owl-carousel"> 
+                            <div class="single-cases-img">
+                                <img src="{% static 'salespot_website/assets/img/gallery/Image-01.png' %}" alt="">
+                            </div>
+                            <div class="single-cases-img">
+                                <img src="{% static 'salespot_website/assets/img/gallery/Image-02.png' %}" alt="">
+                            </div>
+                            <div class="single-cases-img">
+                                <img src="{% static 'salespot_website/assets/img/gallery/Image-03.png' %}" alt="">
+                            </div>
+                            <div class="single-cases-img">
+                                <img src="{% static 'salespot_website/assets/img/gallery/Image-04.png' %}" alt="">
+                            </div>
+                            <div class="single-cases-img">
+                                <img src="{% static 'salespot_website/assets/img/gallery/Image-05.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Applic App End -->
+
+        <!-- CUSTOM - Industries Start -->
+        <section class="about-sec pt-2 pb-2" id="industries_section">
+          <div class="row py-3">
+            <div class="col-lg-12 side-text">
+              <div class="row justify-content-center">
+
+                <div class="col-lg-3 col-md-4 col-sm-10 col-xs-10 d-flex industry-item">
+                  <div class="bg left">
+                    <div class="img-box">
+                      <img src="{% static 'salespot_website/assets/img/Industry_images/FMCG.jpg' %}" class="w-100" />
+                    </div>
+                    <div class="text">
+                      <h3 class="sub-title mb-3">FMCG (Fast-Moving Consumer Goods)</h3>
+                      <ul>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Plan beat routes smartly for efficient store visits.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Book orders quickly to boost sales.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Apply discounts and schemes on the spot.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Get customer feedback in real-time.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Improve product visibility with store tracking.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-10 col-xs-10 d-flex industry-item">
+                  <div class="bg center">
+                    <div class="img-box">
+                      <img src="{% static 'salespot_website/assets/img/Industry_images/Manifacturing.jpg' %}" class="w-100" />
+                    </div>
+                    <div class="text">
+                      <h3 class="sub-title mb-3">Manufacturing</h3>
+                      <ul>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Create and share bulk quotes easily.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Monitor sales performance through dashboards.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Access customer data for better conversions.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Track field staff via geo-tagged attendance.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Use offline mode in remote areas.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-10 col-xs-10 d-flex industry-item">
+                  <div class="bg right">
+                    <div class="img-box">
+                      <img src="{% static 'salespot_website/assets/img/Industry_images/consumer-electronics-and-compliances_01.jpg' %}" class="w-100" />
+                    </div>
+                    <div class="text">
+                      <h3 class="sub-title mb-3">Consumer Electronics & Appliances</h3>
+                      <ul>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Share product demos and catalogues instantly.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Log service calls and complaints in real-time.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Compare competitor products easily.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Repeat orders and share invoices on the go.</li>
+                        <li><i class="fa-solid fa-check fs-3 mr-3"></i>Assign beat visits for regular dealer engagement.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- CUSTOM - Industries End -->
+
+        <!-- Contact Us Banner Start -->
+        <div class="contact_us_box mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 contact_button_content">
+                        <h1>Set up a time to explore our platform.</h1>
+                    </div>
+                    <div class="col-md-6 col-sm-12 contact_button_inside">
+                        <a style="height: 20px;" class="contact_us_button" target="_blank" href="{% url 'contactus' %}" >Contact US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Us Banner End -->
+
+        <!-- Our Customer Start -->
+        {% comment %} <div class="our-customer section-padd-top30">
+            <div class="container-fluid position-relative">
+              <div class="section-tittle">
+                <h2>What Our Customers<br>Have to Say</h2>
+              </div>
+          
+              <div class="slider-container">
+                <!-- Buttons -->
+                <button class="slider-btn left-btn" id="prevBtn">&#8249;</button>
+                <button class="slider-btn right-btn" id="nextBtn">&#8250;</button>
+          
+                <!-- Slider track -->
+                <div class="slider-track" id="sliderTrack">
+                  <!-- Customer 1 -->
+                  <div class="single-customer">
+                    <div class="what-img">
+                      <img src="{% static 'salespot_website/assets/img/shape/man1.png' %}" alt="Customer 1">
+                    </div>
+                    <div class="what-cap">
+                      <h4>Welcome To The Best Model Winner Contest</h4>
+                      <p>Utenim ad minim veniam quisnostrud exercitation ullamcolabor nisiut aliquip...</p>
+                    </div>
+                  </div>
+          
+                  <!-- Customer 2 -->
+                  <div class="single-customer">
+                    <div class="what-img">
+                      <img src="{% static 'salespot_website/assets/img/shape/man2.png' %}" alt="Customer 2">
+                    </div>
+                    <div class="what-cap">
+                      <h4>Excellent Experience With The Team</h4>
+                      <p>Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit...</p>
+                    </div>
+                  </div>
+          
+                  <!-- Customer 3 -->
+                  <div class="single-customer">
+                    <div class="what-img">
+                      <img src="{% static 'salespot_website/assets/img/shape/man3.png' %}" alt="Customer 3">
+                    </div>
+                    <div class="what-cap">
+                      <h4>Truly Professional and Reliable</h4>
+                      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> {% endcomment %}
+        <!-- Our Customer End -->
+
+        <!-- Get in touch Start -->
+        <section class="best-pricing pricing-padding sky-blue">
+            <div class="container-fluid">
+                <!-- Section Tittle -->
+                <div class="row d-flex justify-content-center">
+
+                    <div class="col-md-6 col-lg-6 col-12">
+                        <div id="about_us_image">
+                            <img src="{% static 'salespot_website/assets/img/contact_section/M_01.png' %}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-12 contact_home_form_div">
+
+                        <div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 text-center mt-2">
+                            <h2 class="contact-title get_in_touch_title">Get in Touch</h2>
+                        </div>
+    
+                        <div class="col-md-12 p-4">
+                            <form id="UserResponse_Form">
+                                {% csrf_token %} <!-- CSRF Token -->
+                                <div class="row">
+                                    
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="full_name" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="full_name" aria-describedby="full_name" placeholder="Enter">
+                                            <span id="full_name_error"></span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="contact_number" class="form-label">Contact Number</label>
+                                            <input type="text" class="form-control" id="contact_number" aria-describedby="contact_number" placeholder="Enter">
+                                            <span id="contact_number_error" class="text-danger"></span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter">
+                                            <span id="email_error"></span>
+                                        </div>
+                                    </div>
+
+                                    {% comment %} <div class="col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Contact Number</label>
+                                            <input id="phone" type="tel" class="form-control" placeholder="Enter phone number" />
+                                        </div>
+                                    </div> {% endcomment %}
+    
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="company_name" class="form-label">Company Name</label>
+                                            <input type="text" class="form-control" id="company_name" placeholder="Enter">
+                                            <span id="company_name_error"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12 mt-3 mb-3">
+                                        <div class="mb-3">
+                                            <label for="no_of_users" class="form-label">No of Users</label>
+                                            <div>
+                                                <span class="users_button" data-value="1-20" >1 - 20</span>
+                                                <span class="users_button" data-value="21-40" >21 - 40</span>
+                                                <span class="users_button" data-value="41-70" >41 - 70</span>
+                                                <span class="users_button" data-value="71-100" >71 - 100</span>
+                                                <span class="users_button" data-value="100+" >100+</v>
+                                            </div>
+                                            
+                                            <span id="no_of_users_error" class="mt-2"></span>
+                                        </div>
+                                        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                                    </div>
+
+                                    <div class="col-md-12 col-sm-12 mt-3 mb-3">
+                                        <div class="mb-3">
+                                            <label for="message" class="form-label">Message</label>
+                                            <input type="text" class="form-control" id="message" placeholder="Enter">
+                                            <span id="message_error"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="captcha" class="form-label">Captcha</label>
+                                            <input type="text" class="form-control" id="captcha" aria-describedby="captcha" placeholder="Enter">
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-md-6 col-sm-6">
+                                        <div style="background-color: rgb(175, 175, 175); height: 100%; width: 100%;" class="mb-3 d-flex justify-content-center align-items-center">
+                                            {% comment %} <span id="load_captcha">AxJKl50</span>
+                                            <button type="button" class="refresh-captcha fs-3">↻</button> {% endcomment %}
+                                            <span class="captcha-image ms-4 fs-4" id="captcha-text"></span>
+                                            <button type="button" class="refresh-captcha fs-3">↻</button>
+                                        </div>
+                                    </div>
+                                    <span id="captcha_error"></span>
+
+                                    <div class="col-md-12 col-sm-12 text-center mt-3 mb-3">
+                                        <button type="submit" onclick="submit_user_details_data(event)" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </section>
+        <!-- Get in touch End -->
+
+    {% endblock %}
+
+    {% block scripts %}
+    
+        <!-- JS here -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+        <!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'salespot_website/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+        
+        <!-- Jquery, Popper, Bootstrap -->
+        <script src="{% static 'salespot_website/assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/bootstrap.min.js' %}"></script>
+        <!-- Jquery Mobile Menu -->
+        <script src="{% static 'salespot_website/assets/js/jquery.slicknav.min.js' %}"></script>
+
+        <!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'salespot_website/assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/slick.min.js' %}"></script>
+        <!-- Date Picker -->
+        <script src="{% static 'salespot_website/assets/js/gijgo.min.js' %}"></script>
+        <!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'salespot_website/assets/js/wow.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/animated.headline.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.magnific-popup.js' %}"></script>
+
+        <!-- Scrollup, nice-select, sticky -->
+        <script src="{% static 'salespot_website/assets/js/jquery.scrollUp.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.sticky.js' %}"></script>
+        
+        <!-- contact js -->
+        <script src="{% static 'salespot_website/assets/js/contact.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.form.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/mail-script.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+        
+        <!-- Jquery Plugins, main Jquery -->    
+        <script src="{% static 'salespot_website/assets/js/plugins.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/main.js' %}"></script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.0.1/js/intlTelInput.min.js"></script>
+
+        {% comment %} <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.0.1/js/intlTelInput.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.0.1/js/utils.min.js"></script> {% endcomment %}
+
+        <!-- Sweet Alert CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- Country code plugin -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+        <script>
+            const contact_numberInput = document.querySelector("#contact_number");
+            const iti = window.intlTelInput(contact_numberInput, {
+                initialCountry: "in",
+                separateDialCode: true,
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+            });
+        </script>
+
+        <!-- Optional auto-hide after delay -->
+        <script>
+            window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+            }, 2000); // Hide after 3 seconds
+            });
+        </script>
+
+        <script>
+            document.getElementById("loginLink").addEventListener("click", function () {
+                const loginUrl = `${window.location.protocol}//${window.location.host}/admin/login/?next=/admin/`;
+                window.open(loginUrl, "_blank");
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+            $(".users_button").click(function() {
+                $(".users_button").removeClass("active-users-button");
+                $(this).addClass("active-users-button");
+            });
+            });
+        </script>
+
+        <!-- Save Form Data -->
+        <script>
+
+            const clearErrors = () => {
+                setTimeout(() => {
+                    $("#full_name_error, #contact_number_error, #email_error, #company_name_error, #no_of_users_error, #mobile_error, #message_error, #captcha_error").fadeOut();
+                }, 3000);
+            };
+
+            function submit_user_details_data(event) {  
+                event.preventDefault(); // Prevent default form submission
+
+                // Clear previous error messages
+                $("#full_name_error, #contact_number_error, #email_error, #company_name_error, #no_of_users_error, #mobile_error, #message_error, #captcha_error").text("").show();
+        
+                // Validate Name
+                let full_name = $('#full_name').val();
+                if (!full_name) {
+                    $("#full_name_error").text("Name is required.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                } else if (!/^[A-Za-z]+$/.test(full_name)) {
+                    $("#full_name_error").text("Name must contain only alphabets.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                // Validate Mobile
+                // let countryCode = $('#countryCodeIndex').val();
+                let countryCode = "+" + iti.getSelectedCountryData().dialCode;
+                let contact_number = $('#contact_number').val();
+                let mobilePattern = /^[0-9]+$/;
+
+                if (!contact_number) {
+                    $("#contact_number_error").text("Mobile number is required.").css("color", "red").show();
+                    clearErrors();
+                    return;
+                } else if (!mobilePattern.test(contact_number)) {
+                    $("#contact_number_error").text("Mobile number must contain only numerical digits.").css("color", "red").show();
+                    clearErrors();
+                    return;
+                } else if (contact_number.length < 10) {
+                    $("#contact_number_error").text("Mobile number should be at least 10 digits.").css("color", "red").show();
+                    clearErrors();
+                    return;
+                } else if (contact_number.length > 10) {
+                    $("#contact_number_error").text("Mobile number should only be a maximum of 10 digits.").css("color", "red").show();
+                    clearErrors();
+                    return;
+                }
+
+                // Validate Email
+                let email = $('#email').val();
+                if (!email) {
+                    $("#email_error").text("Email Id is required.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email)) {
+                    $("#email_error").text("Invalid email id format.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                // Validate Name
+                let company_name = $('#company_name').val();
+                if (!company_name) {
+                    $("#company_name_error").text("Name is required.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                } else if (!/^[A-Za-z]+$/.test(company_name)) {
+                    $("#company_name_error").text("Name must contain only alphabets.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                // Validate Message
+                let no_of_users = $('.users_button.active-users-button').data('value');
+                if (!no_of_users) {
+                    $("#no_of_users_error").text("Please select number of users.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                // Validate Message
+                let message = $('#message').val();
+                if (!message) {
+                    $("#message_error").text("Message is required.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                //const selectedUser = $('#select_user').val();
+                const csrfToken = $('[name=csrfmiddlewaretoken]').val();  // Fetch CSRF token
+                
+                // Validate Captcha
+                const enteredCaptcha = $("#captcha").val();
+                const actualCaptcha = $("#captcha-text").text();
+
+                if (!enteredCaptcha) {
+                    $("#captcha_error").text("Captcha is required. Please enter the captcha.").css("color", "red").show();
+                    clearErrors();
+                    return; // Stop further validation
+                }
+
+                if (enteredCaptcha !== actualCaptcha) {
+                    $("#captcha_error").text("Captcha did not match. Please try again.").css("color", "red").show();
+                    clearErrors();
+                    refreshCaptcha(); // Refresh captcha after a failed attempt
+                    return; // Stop further validation
+                }
+
+                console.log('full_name : ', full_name)
+                console.log('countryCode : ', countryCode)
+                console.log('contact_number : ', contact_number)
+                console.log('email : ', email)
+                console.log('company_name : ', company_name)
+                console.log('no_of_users : ', no_of_users)
+                console.log('message : ', message)
+
+                $.ajax({
+                    url: `${window.location.protocol}//${window.location.host}/api/website/save_user_response/`,
+                    type: 'POST',
+                    data: {
+                        full_name: full_name,
+                        country_code: countryCode,
+                        contact_number: contact_number,
+                        email_id: email,
+                        company_name: company_name,
+                        no_of_users: no_of_users,
+                        message: message,
+                        csrfmiddlewaretoken: csrfToken
+                    },
+                    success: function (response) {
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Data submitted successfully!',
+                            timer: 2000,
+                            showConfirmButton: false,
+                            allowOutsideClick: false,
+                        });
+
+                        // Optionally clear the form and refresh the captcha
+                        $('#UserResponse_Form')[0].reset();
+                        $(".users_button").removeClass("active-users-button");
+                        refreshCaptcha();
+                    },
+                    error: function (error) {
+                        alert('An error occurred while submitting feedback.');
+                        console.error('Error:', error);
+                    }
+                });
+                
+            }
+        
+            // Function to generate random captcha
+            function generateCaptcha() {
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                let captcha = '';
+                for (let i = 0; i < 7; i++) {
+                    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                return captcha;
+            }
+
+            // Function to refresh captcha
+            function refreshCaptcha() {
+                const newCaptcha = generateCaptcha();
+                $('#captcha-text').text(newCaptcha);
+                $('#captcha').val('');
+                $('#captcha-result').text('');
+            }
+
+            $(document).ready(function () {
+                // Initialize captcha on page load
+                refreshCaptcha();
+
+                // Refresh captcha on button click
+                $('.refresh-captcha').click(function () {
+                    refreshCaptcha();
+                });
+
+                // Submit feedback function with captcha check
+                
+            });
+        </script>
+
+        <!-- New Loading animation Script -->
+        <script>
+            setTimeout(() => {
+                const logo1 = document.getElementById('logo1');
+                const logo2 = document.getElementById('logo2');
+
+                // Position to center and trigger spin
+                logo1.style.left = 'calc(50% - min(40vw, 200px) / 2)';
+                logo1.style.opacity = '1';
+                logo2.style.right = 'calc(50% - min(40vw, 200px) / 2)';
+                logo2.style.opacity = '1';
+
+                logo1.style.animation = 'spinYForward 1.2s ease-in-out forwards';
+                logo2.style.animation = 'spinYBackward 1.2s ease-in-out forwards';
+
+                // Fade out after spin
+                setTimeout(() => {
+                const loader = document.getElementById('loader');
+                loader.style.transition = 'opacity 0.6s ease';
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 600);
+                }, 1200);
+            }, 1300);
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const buttons = document.querySelectorAll(".users_button");
+
+                buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    buttons.forEach(btn => btn.classList.remove("active")); // Remove active from all
+                    this.classList.add("active"); // Add to clicked
+                });
+                });
+            });
+        </script>
+    
+    {% endblock %}
+   
+    
