@@ -412,28 +412,32 @@
         <script src="{% static 'salespot_website/assets/js/plugins.js' %}"></script>
         <script src="{% static 'salespot_website/assets/js/main.js' %}"></script>
 
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="{% static 'salespot_website/assets/js/jquery-3.7.1.min.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/sweetalert2@11.js' %}"></script>
+        <script src="{% static 'salespot_website/assets/js/custom/feature.js' %}"></script>
+
+        {% comment %} <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> {% endcomment %}
 
         <!-- Sweet Alert CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        {% comment %} <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> {% endcomment %}
 
         <!-- Optional auto-hide after delay -->
-        <script>
+        {% comment %} <script>
             window.addEventListener("load", () => {
             setTimeout(() => {
                 document.getElementById("loader").style.display = "none";
             }, 2000); // Hide after 3 seconds
             });
-        </script>
+        </script> {% endcomment %}
 
-        <script>
+        {% comment %} <script>
             document.getElementById("loginLink").addEventListener("click", function () {
                 const loginUrl = `${window.location.protocol}//${window.location.host}/admin/login/?next=/admin/`;
                 window.open(loginUrl, "_blank");
             });
-        </script>
+        </script> {% endcomment %}
 
-        <script>
+        {% comment %} <script>
 
             const clearErrors = () => {
                 setTimeout(() => {
@@ -522,7 +526,7 @@
                 const csrfToken = $('[name=csrfmiddlewaretoken]').val();  // Fetch CSRF token
 
                 $.ajax({
-                    url: `${window.location.protocol}//${window.location.host}/api/website/small_userdetail_form_response/`,
+                    url: `${window.location.protocol}//${window.location.host}/small_userdetail_form_response/`,
                     type: 'POST',
                     data: {
                         full_name: full_name,
@@ -553,10 +557,11 @@
                 });
                 
             }
-        </script>
+
+        </script> {% endcomment %}
 
         <!-- New Loading animation Script -->
-        <script>
+        {% comment %} <script>
             setTimeout(() => {
                 const logo1 = document.getElementById('logo1');
                 const logo2 = document.getElementById('logo2');
@@ -578,6 +583,6 @@
                 setTimeout(() => loader.style.display = 'none', 600);
                 }, 1200);
             }, 1300);
-        </script>
+        </script> {% endcomment %}
 
         {% endblock %}

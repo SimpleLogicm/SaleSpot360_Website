@@ -147,7 +147,7 @@
 //                 //const no_of_users = $('#no_of_users').val() || '';
     
 //                 $.ajax({
-//                     url: `${window.location.protocol}//${window.location.host}/api/website/getintouch_response/`,
+//                     url: `${window.location.protocol}//${window.location.host}/getintouch_response/`,
 //                     type: 'POST',
 //                     data: {
 //                         full_name: full_name,

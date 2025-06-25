@@ -7,7 +7,7 @@
     <title>SaleSpot360 Landing Page.</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -15,9 +15,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.0.1/css/intlTelInput.min.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"/> {% endcomment %}
+
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/bootstrap_4_5_2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'salespot_website/assets/css/intlTelInput.min.css' %}">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{% static 'salespot_website/assets/css/bootstrap.min.css' %}">
@@ -545,59 +549,73 @@
     <!-- JS here -->
      
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> {% endcomment %}
+    <script src="{% static 'salespot_website/assets/js/bootstrap.bundle.min.js' %}"></script>
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> {% endcomment %}
+    <script src="{% static 'salespot_website/assets/js/swiper-bundle.min.js' %}"></script>
 
     <!-- All JS Custom Plugins Link Here here -->
-        <script src="{% static 'salespot_website/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
-		
-		<!-- Jquery, Popper, Bootstrap -->
-		<script src="{% static 'salespot_website/assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/popper.min.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/bootstrap.min.js' %}"></script>
-	    <!-- Jquery Mobile Menu -->
-        <script src="{% static 'salespot_website/assets/js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="{% static 'salespot_website/assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/bootstrap.min.js' %}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="{% static 'salespot_website/assets/js/jquery.slicknav.min.js' %}"></script>
 
-		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="{% static 'salespot_website/assets/js/owl.carousel.min.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/slick.min.js' %}"></script>
-        
-		<!-- One Page, Animated-HeadLin -->
-        <script src="{% static 'salespot_website/assets/js/wow.min.js' %}"></script>
-		<script src="{% static 'salespot_website/assets/js/animated.headline.js' %}"></script>
-		
-		<!-- Scrollup, nice-select, sticky -->
-        <script src="{% static 'salespot_website/assets/js/jquery.scrollUp.min.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/jquery.nice-select.min.js' %}"></script>
-		<script src="{% static 'salespot_website/assets/js/jquery.sticky.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/jquery.magnific-popup.js' %}"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="{% static 'salespot_website/assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/slick.min.js' %}"></script>
+    
+    <!-- One Page, Animated-HeadLin -->
+    <script src="{% static 'salespot_website/assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/animated.headline.js' %}"></script>
+    
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="{% static 'salespot_website/assets/js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/jquery.magnific-popup.js' %}"></script>
 
-        <!-- contact js -->
-        <script src="{% static 'salespot_website/assets/js/contact.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/jquery.form.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/jquery.validate.min.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/mail-script.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/jquery.ajaxchimp.min.js' %}"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
-        <script src="{% static 'salespot_website/assets/js/plugins.js' %}"></script>
-        <script src="{% static 'salespot_website/assets/js/main.js' %}"></script>
+    <!-- contact js -->
+    <script src="{% static 'salespot_website/assets/js/contact.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/jquery.form.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/mail-script.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="{% static 'salespot_website/assets/js/plugins.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/main.js' %}"></script>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.0.1/js/intlTelInput.min.js"></script>
+    {% comment %} <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> {% endcomment %}
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.0.1/js/intlTelInput.min.js"></script> {% endcomment %}
 
     <!-- Sweet Alert CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script>
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> {% endcomment %}
+
+    <script src="{% static 'salespot_website/assets/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/sweetalert2@11.js' %}"></script>
+    <script src="{% static 'salespot_website/assets/js/intlTelInput.min.js' %}"></script>
+
+    <script>
+            const UTILS_JS_PATH = "{% static 'js/countrycode_utils.js' %}";
+        </script>
+
+        <script src="{% static 'salespot_website/assets/js/custom/landing_page.js' %}"></script>
+
+
+        {% comment %} <script>
             const contact_numberInput = document.querySelector("#contact_number");
             const iti = window.intlTelInput(contact_numberInput, {
                 initialCountry: "in",
                 separateDialCode: true,
                 utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
             });
-        </script>
+        </script> {% endcomment %}
 
     <!-- Get Country code data -->
     {% comment %} <script>
@@ -628,7 +646,7 @@
     </script> {% endcomment %}
 
     <!-- Get Country code data -->
-        <script>
+        {% comment %} <script>
             $(document).ready(function () {
 
                 $("#countryCodeIndex").hide();
@@ -681,27 +699,27 @@
                     console.error("intlTelInputGlobals is not available.");
                 }
             });
-        </script>
+        </script> {% endcomment %}
 
     <!-- Optional auto-hide after delay -->
-    <script>
+    {% comment %} <script>
         window.addEventListener("load", () => {
         setTimeout(() => {
             document.getElementById("loader").style.display = "none";
         }, 2000); // Hide after 3 seconds
         });
-    </script>
+    </script> {% endcomment %}
 
-    <script>
+    {% comment %} <script>
         $(document).ready(function() {
           $(".users_button").click(function() {
             $(".users_button").removeClass("active-users-button");
             $(this).addClass("active-users-button");
           });
         });
-    </script>
+    </script> {% endcomment %}
 
-    <script>
+    {% comment %} <script>
 
             const clearErrors = () => {
                 setTimeout(() => {
@@ -820,7 +838,7 @@
                 console.log('message : ', message)
 
                 $.ajax({
-                    url: `${window.location.protocol}//${window.location.host}/api/website/save_user_response/`,
+                    url: `${window.location.protocol}//${window.location.host}/save_user_response/`,
                     type: 'POST',
                     data: {
                         full_name: full_name,
@@ -886,9 +904,9 @@
                 // Submit feedback function with captcha check
                 
             });
-        </script>
+        </script> {% endcomment %}
 
-    <script>
+    {% comment %} <script>
         document.addEventListener("DOMContentLoaded", function () {
             const buttons = document.querySelectorAll(".users_button");
 
@@ -899,7 +917,7 @@
             });
             });
         });
-    </script>
+    </script> {% endcomment %}
     
 </body>
 </html>
